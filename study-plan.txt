@@ -1,0 +1,7 @@
+* your programming plan
+========================
+
+0. C grammer study
+1. simle c programming
+2. data structure (now, from now on ~~)
+3. Info olympid (in the near future)
