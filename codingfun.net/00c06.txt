@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, a, b, c, d[101],temp,i,j,cal,pri,sum=0;
+    scanf("%d %d %d %d", &n, &a, &b, &c);
+    for(i=0;i<n;i++) {
+        scanf("%d", &d[i]);
+    }
+    cal = c;
+    pri = a;
+     for (i = 0; i < n-1; i++)
+          for (j = 0; j < n - 1; j++){
+               if (d[j] < d[j + 1]){
+                    temp = d[j + 1];
+                    d[j + 1] = d[j];
+                    d[j] = temp;
+               }
+         }
+    for(i=0;i<n;i++) {
+            cal = cal + d[i];
+            pri = pri + b;
+            if(cal / pri > sum)
+                sum = cal / pri;
+    }
+    printf("%d", sum);
+}

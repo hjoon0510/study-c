@@ -1,0 +1,33 @@
+// http://codingfun.net/?mid=viewProblem&pid=00b11&sort_index=&order_type=&pageNo=1&key=
+
+#include <stdio.h>
+int main()
+{
+	FILE* fp;
+	char a[] = "hello \n my name is hyunjoon lim.\n i am fool. \n today I'm happy \n Because I ate Anndong steam chicken \n";
+	char b[1000];
+	fp = fopen("world.txt", "wt");
+
+	if (fp == NULL)
+	{
+		printf("error");
+		return 0;
+	}
+	fputs(a, fp);
+	fclose(fp);
+
+	fp = fopen("world.txt", "rt");
+
+	if (fp == NULL)
+	{
+		printf("error");
+		return 0;
+	}
+	while (fgets(b, sizeof(b), fp)!= NULL) {
+			printf("%s", b);
+	}
+
+	
+	fclose(fp);
+
+}

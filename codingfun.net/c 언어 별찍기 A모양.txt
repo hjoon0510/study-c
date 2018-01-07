@@ -1,0 +1,52 @@
+#include <stdio.h>
+int main(void)
+{ 
+ 	int n;
+ 	int line, space, star;
+	 
+ 	printf("≥Ù¿Ã:");
+ 	scanf("%d", &n);
+ 	for (space = 1; space <= (n - 1); space++)
+ 	{
+ 		if (space == 1){ printf(" "); }
+ 		printf(" ");
+ 	}
+ 	printf("*");
+ 	printf("\n");
+ 	//-------------------------------------------------------------------------------
+ 	for (line = 1; line <= (n - 2); line++)
+ 	{
+ 		if (line == (n * 2 + 1) /  4)
+ 		{
+ 			for (space = 1; space <= (n - line - 1)-1; space++)
+ 			{
+ 				if (space == 1){ printf(" "); }
+ 				printf(" ");
+ 			}
+ 			printf(" ");
+ 			for (space = -1; space <= 2 * line - 1; space = space + 2)
+ 			{
+					printf("* ");
+ 			}
+ 			printf("\n");
+ 		}
+ 	//---------------------------------------------------------------------------
+ 		else
+ 		{
+	 		for (space = 1; space <= (n - line - 1); space++)
+		 	{
+		 		if (space == 1){ printf(" "); }
+		 		printf(" ");
+		 	}
+		 	printf("*");
+		 	for (space = 1; space <= 2 * line - 1; space++)
+		 	{
+		 		printf(" ");
+		 	}
+		 	printf("*");
+		 	printf("\n");
+	 	}
+	} 
+	printf("\n"); 
+	return 0; 
+}

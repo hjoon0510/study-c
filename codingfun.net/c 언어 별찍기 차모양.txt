@@ -1,0 +1,84 @@
+#include<stdio.h>
+int main()
+{
+	int num = 0, j = 0, i = 0 , l = 0 , r = 0;
+	scanf("%d", &num);
+	l = (num + 1) / 2 - 1;
+	r = (num + 1) / 2 + 1;
+	for (j = 1; j <= num; j++)
+	{
+		if (j == 1 || j == num)
+		{
+			printf(" ");
+		}
+		else
+			printf("*");
+	}
+	printf("\n");
+	/*for (j = 1; j <= num; j++)
+	{
+		printf(" ");
+	}
+	printf("\n");*/
+	//-------------------------------------------
+	for (i = 1; i <= num / 2 + 2; i++)
+	{
+		if (i == 1)
+		{
+			for (j = 1; j <= num + num; j++)
+			{
+				if (j <= num || j == num + (num + 1) / 2)
+				{
+					printf("*");
+				}
+				else
+					printf(" ");
+			}
+		}
+		//---------------------------------------
+		else if (i == 2)
+		{
+			for (j = 1; j <= num + num; j++)
+			{
+				if (j == (num + 1) / 2 || j == num + (num + 1) / 2)
+				{
+					printf("*");
+				}
+				else
+					printf(" ");
+			}
+
+		}
+		//---------------------------------------
+		else if(i != num/ 3)
+		{
+			for(j = 1; j <= num + num; j++)
+			{
+				if (j == l || j == r || j == num + (num + 1) / 2)
+				{
+					printf("*");
+				}
+				else
+					printf(" ");
+			}
+			l--;
+			r++;
+		}
+		//--------------------------------------
+		else
+		{
+			for (j = 1; j <= num + num; j++)
+			{
+				if (j == l || j == r || j >= num + (num + 1) / 2)
+				{
+					printf("*");
+				}
+				else
+					printf(" ");
+			}
+			l--;
+			r++;
+		}
+		printf("\n");
+	}
+}

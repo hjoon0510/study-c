@@ -1,0 +1,14 @@
+#include <stdio.h>
+void main()
+{
+
+    float A, B;
+
+    scanf("%d %d", &A, &B);
+
+    printf("%.3f",A/B);
+}
+/*#include <stdio.h>는함수를 쉽게 쓸수있다
+#은전처리기이다,컴파일러가 컴파일을 수행하기전에 처리하라는것이다
+#include <stdio.h>는헤더파일이다
+%.3f
