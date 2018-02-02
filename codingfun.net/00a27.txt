@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void main()
+
+{ 
+    //freopen("input.txt","r",stdin);
+    //freopen("output.txt","w",stdout);
+    int i;
+    int N;
+
+    scanf("%d",&N);
+
+    for(i=0;i<N;i++)
+
+        printf("Hello KOI\n");
+
+
+}

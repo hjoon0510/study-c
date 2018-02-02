@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int i,len,result=0,j;
+    char d[30],k[8]="IOSHZXN";
+    scanf("%s", d);//SHINS
+     len=strlen(d);
+    for(i=0;i<len;i++)
+    {
+       for(j=0;j<=6;j++)
+       {
+          if(d[i]==k[j])
+          {
+               result=1;
+               break;
+          }
+          if(d[i]!=k[j])
+          {
+               result=0;
+          }
+        }
+          if(result!=1)
+          {
+               printf("NO"); return 0;
+          }
+    }
+    printf("YES");
+    return 0;
+}

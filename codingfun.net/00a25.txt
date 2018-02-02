@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{
+
+    float q, d,sum;
+    q=0;
+    d=0;
+     int helper;
+    scanf("%d %d", &q, &d);
+    helper=q/d*1000;
+    sum=(float)helper/1000;
+     printf("%.3f",sum);
+}

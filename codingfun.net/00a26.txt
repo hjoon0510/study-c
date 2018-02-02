@@ -1,0 +1,10 @@
+#include <stdio.h>
+void main()
+{ 
+    //freopen("input.txt","r",stdin);
+    //freopen("output.txt","w",stdout);
+    int A;
+    scanf("%d",&A);
+    printf("Hello KOI %d",A);
+}
+

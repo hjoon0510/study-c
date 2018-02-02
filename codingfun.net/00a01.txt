@@ -1,0 +1,9 @@
+#include <stdio.h> // std --> standard , io -->input , h -->header 
+void main()
+{
+
+    int A, B;//정수a, b선언 , integer
+
+    scanf("%d %d", &A, &B);//file , d --> decimal 
+    printf("%d", A*B);
+}

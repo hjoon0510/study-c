@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+	int num = 0, n = 0, i = 0, j = 0;
+	scanf("%d", &num);
+	printf("\n");
+	for (i = 1; i <= num; i++)
+	{
+		if (i == (num + 1) / 2)
+		{
+
+			for (j = 1; j <= num; j++)
+			{
+					printf("*");
+
+			}
+		}
+		//-----------------------------------------------------------
+		else {
+			for (j = 1; j <= num; j++)
+			{
+				if (j == 1 || j == num){
+					printf("*");
+			}
+				else
+					printf(" ");
+
+			}
+		}
+		printf("\n");
+	}
+	printf("\n");
+}

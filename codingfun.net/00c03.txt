@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{
+    int jp[5],i=0,v=2000,w=2000;//,y=0,u=0,all=0
+     for(i=0;i<5;i++)
+      {
+       scanf("%d",&jp[i]);
+       if(v>=jp[i] && i<=2) v=jp[i];
+       else if(w>=jp[i] && i>=3)w=jp[i];
+      }
+      printf("%d\n",w+v-50);
+}
+

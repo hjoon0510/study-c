@@ -1,0 +1,164 @@
+//00c02
+#include <stdio.h>
+int main()
+{
+    int N=0,d[150]={0,},i=0,sum1=0,sum2=0, answer=0,j=0,ft=0,se=0,test1=0,test2=0,t=0,f=0,h=1,w=0,q=0;//p=0,
+    int  z=0 ,x=0 ,c=0,b=0,m=0,a=0,l=0,y=0,e=0,u=0;
+    scanf("%d",&N);//동아리 개수
+
+    for(i=0;i<N;i++){
+    scanf("%d",&d[i]);//동아리별 회원수
+    }
+
+    for(i=0;i<N;i++){     // 44~110문장의 조건에맞는경우찾기 및문장의비교대상문장
+      if(d[i]==3){
+         a++;
+         if(y==0){
+            y=y+i;
+         }
+         else if(e==0 && y!=0){
+            e=e+i;
+         }
+      }
+      if(d[i]==1 && l==0){
+         l=l+1;
+         if(u==0){
+          u=u+i;
+        }
+      }
+      if(d[i]==1){
+         test1++;//1
+
+         if(z==0){
+            z=z+i;
+         }
+         else if(x==0){
+            x=x+i;
+         }
+      }
+      else if(d[i]==2){
+         test2++;
+         if(w==0){
+            w=w+i;
+            
+         }
+         else if(q==0){
+            q=q+i;
+         }
+         else if(b==0){
+            b=b+i;
+         }
+         else if(m==0){
+            m=m+i;
+         }
+         else if(c==0){
+            c=c+i;
+         }
+      }
+    } // end of for
+
+    if(l==1 && a==2){//3 3 2일때는 택시 3대추가
+       f=f+3;
+       answer=answer+3;
+       d[u]=0;
+       d[y]=0;
+       d[e]=0;
+    }
+    if(z==1 && x==1 &&c==1){     // 세 동아리가 2,1,1(합해서 4명)로 택시를 추가함
+       d[z]=0;
+       d[x]=0;
+       d[c]=0;
+       f++;
+       test2=test2-1; test1=test1-2;
+    }
+
+    if(w==1 && q==1){ // 두동아리가 2,2로택시 1대를 더하는경우
+       answer++;
+       d[w]=0;
+       d[q]=0;
+       f++;
+       test2=test2-2;
+    }
+
+    if(b==1 && m==1){ // 두동아리가 2,2로택시 1대를 더하는경우
+       answer++;
+       d[b]=0;
+       d[m]=0;
+       f++;
+       test2=test2-2;
+    }
+
+    for(i=0;i<N;i++){     // 남은사람수를 구함
+       t=t+d[i];
+    }
+
+    if(t<4){     // 남은사람수가 4보다작으면 이떄동안 구한택시에다 1대를 추가해 서나온값을 출력하고 프로그래밍 끝냄
+       answer++;
+       printf("%d",h+f);
+       return 0;
+    }
+
+    if(t==6 || t==5 || t==7 || t==8){ //남은사람수가 6보다작으면 이떄동안 구한택시에다 2대를 추가해 서나온값을 출력하고 프로그래밍 끝냄
+       printf("%d",f+2);
+       return 0;
+    }
+
+
+    for(i=0;i<N;i++){  //1명의 동아리가이4개가되면 택시추가,2명의 동아리가이2개가되면 택시추가(95줄까지)
+       if(d[i]!=0 && ft<4 && d[i]==1){
+          ft=ft+1;
+          if(test1!=1){
+            d[i]=0;
+          }
+       }
+
+       if(ft==4){
+          sum1=sum1+ft/4;
+          ft=0;
+       }
+
+       if(d[i]!=0 && se<4 && d[i]==2){
+          se=se+2;
+          if(test2!=1)
+             d[i]=0;
+       }
+       if(se==4){
+          sum1=sum1+se/4;
+          se=0;
+        }
+     } // end of for
+
+    // sequence 1
+    for(i=0;i<N;i++){
+      if(d[i]==4){
+       f++;
+       sum1++;
+       d[i]=0;}
+    }
+
+    for(i=0;i<N;i++){ //택시1개에 2동아리를타게하는것
+       for(j=i+1;j<N;j++){
+          if(d[i]==0){
+             continue;
+          }
+          else if((d[i] + d[j] == 4) && (d[i] != 0) && (d[j] != 0) ){
+              // 2개의 동아리를 합산해서 "4" 인 경우
+             sum1++;
+             f++;
+             d[i]= d[j] = 0;
+            break; // Hint: Here, add your statement!!!!
+          }
+          else ;
+       }
+    }
+
+    // sequence 2
+    for(i=0;i<N;i++){     //나머지수가1과같으면 택시추가
+        if (d[i] != 0) sum2++;
+    }
+
+    answer=sum1+sum2;
+    //printf ("sum1=%d, sum2=%d\n", sum1, sum2);
+    printf("%d",answer);
+    return 0;
+}

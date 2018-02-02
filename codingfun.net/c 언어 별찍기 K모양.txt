@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{
+	int i = 0, j = 0, num = 0, n = 0;
+	scanf("%d", &num);
+	n = (num / 2) + 1;
+	for (i = 1; i <= num / 2; i++)
+	{
+			printf("*");
+		for (j = 1; j <= num - 1; j++)
+		{
+			if (j == n)
+			{
+				printf("*");
+			}
+			else
+				printf(" ");
+
+		}
+		n--;
+		printf("\n");
+	}
+	n = 1;
+	for (i = 1; i <= num / 2; i++)
+	{
+		printf("*");
+		for (j = 1; j <= num - 1; j++)
+		{
+			if (j == n)
+			{
+				printf("*");
+			}
+			else
+				printf(" ");
+
+		}
+		n++;
+		printf("\n");
+	}
+}

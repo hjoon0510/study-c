@@ -1,0 +1,29 @@
+
+#include <stdio.h>//함수를 쓴다고 알리는 것이다 
+
+
+void main()//void 의 뜻은 함수가 return 하는 값이다, main:프로그램이 작성되는주요공간이다 
+
+
+
+{  
+
+
+
+
+    int A, B;
+    int C; 
+    scanf("%d", &A); 
+
+    B = A%2; 
+
+    if (B==0) 
+
+        C = 0; 
+
+
+    if (B!=0)// !=:같지않다면 
+
+        C=1; 
+    printf("%d",C); 
+} 
