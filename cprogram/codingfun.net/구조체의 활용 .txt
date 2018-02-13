@@ -1,0 +1,15 @@
+#include <stdio.h>
+struct st
+{
+	char name[20];
+	char sch[20];
+	int grade;
+};
+void main()
+{
+//	struct st mydata={ {"김철수","임현준","문재인"},{"대한초등학교","매현초등학교","서울초등학교"},{6,3,7} };
+	struct st mydata[10] = { { "김철수", "대한초등학교", 6 }, { "임현준", "매현초등학교", 3 }, { "문재인", "대한초등학교", 7 } };
+	printf("이름:%s\n학교:%s\n학년:%d\n\n", mydata[0].name, mydata[0].sch, mydata[0].grade);
+	printf("이름:%s\n학교:%s\n학년:%d\n\n", mydata[1].name, mydata[1].sch, mydata[1].grade);
+	printf("이름:%s\n학교:%s\n학년:%d\n\n", mydata[2].name, mydata[2].sch, mydata[2].grade);
+}

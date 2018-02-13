@@ -1,0 +1,138 @@
+#include <stdio.h>
+int main(void)
+{
+	int num = 0, n = 0, m = 0, i = 0, j = 0;
+	scanf("%d", &num);
+	if (num <= 11 && num > 9){
+		for (i = 1; i <= num; i++)
+		{
+			if (i == 1 || i == num)
+			{
+				for (j = 1; j <= num; j++)
+				{
+					if (j == 1)
+						printf("  ");
+					else
+						printf("* ");
+				}
+			}
+			else if (i == num - 3)
+			{
+				for (j = 0; j < num + 2; j++)
+				{
+					if (j >= num - 2 || j == 0)
+					{
+						printf("* ");
+					}
+					else
+						printf("  ");
+				}
+			}
+
+			else {
+				for (j = 1; j <= num; j++)
+				{
+					if (j == 1)
+					{
+						printf("* ");
+					}
+					else
+						printf("  ");
+				}
+				if (i >= num - 3 || i <= (num + 1) / 2)
+					printf("*");
+			}
+			printf("\n");
+		}
+	}
+	//-------------------------------------------------------------------------------------------------------------------------------
+	if (num <= 9)
+	{
+		for (i = 1; i <= num; i++)
+		{
+			if (i == 1 || i == num)
+			{
+				for (j = 1; j <= num; j++)
+				{
+					if (j == 1)
+						printf("  ");
+					else
+						printf("* ");
+				}
+			}
+
+			else if (i == num - 2 )
+			{
+				for (j = 0; j < num + 2; j++)
+				{
+					if (j >= num - 2 || j == 0)
+					{
+						printf("* ");
+					}
+					else
+						printf("  ");
+				}
+			}
+
+			else {
+				for (j = 1; j <= num; j++)
+				{
+					if (j == 1)
+					{
+						printf("* ");
+					}
+					else
+						printf("  ");
+				}
+				if (i >= num - 3 || i < (num + 1) / 2 - 1)
+					printf("*");
+			}
+			printf("\n");
+		}
+	}
+	//--------------------------------------------------------------------------------------------------------------------------------
+	else{
+		for (i = 1; i <= num; i++)
+		{
+			if (i == 1 || i == num)
+			{
+				for (j = 1; j <= num; j++)
+				{
+					if (j == 1)
+						printf("  ");
+					else
+						printf("* ");
+				}
+			}
+
+			else if (i == num - 4)
+			{
+				for (j = 0; j < num + 3; j++)
+				{
+					if (j >= num - 3 || j == 0)
+					{
+						printf("* ");
+					}
+					else
+						printf("  ");
+				}
+			}
+
+			else {
+				for (j = 1; j <= num; j++)
+				{
+					if (j == 1)
+					{
+						printf("* ");
+					}
+					else
+						printf("  ");
+				}
+				if (i >= num - 4 || i <= (num + 1) / 2)
+					printf("*");
+			}
+			printf("\n");
+		}
+	}
+	return 0;
+}

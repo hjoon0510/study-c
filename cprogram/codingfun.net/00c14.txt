@@ -1,0 +1,21 @@
+#include <stdio.h>//(값에의한 호출 사용)
+int help(int l,int a,int b,int c,int d,int q,int w,int bks)
+{
+    q=a / c;
+    if(a%c!=0){(q)++;}
+    //printf("%d\n",q);
+    w=b / d;
+    if(b%d!=0){(w)++;}
+    //printf("%d\n",w);
+    if(q<w){bks=w;}
+    else  {bks=q;}
+    return bks;
+}
+int main()
+{
+    int l=0,a=0,b=0,c=0,d=0,q=0,w=0,bks=0,day;
+    scanf("%d %d %d %d %d",&l,&a,&b,&c,&d);
+    day=help(l,a,b,c,d,q,w,bks);
+    printf("%d\n",l-day);
+    return 0;
+ }

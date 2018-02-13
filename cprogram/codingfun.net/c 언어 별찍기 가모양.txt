@@ -1,0 +1,54 @@
+#include<stdio.h>
+int main()
+{
+	int num = 0, j = 0, i = 0;
+	scanf("%d", &num);
+	for (i = 1; i <= num; i++)
+	{
+		if (i == 1)
+		{
+			for (j = 1; j <= num + num; j++)
+			{
+				if (j == num + (num + 1) / 2)
+				{
+					printf("*");
+				}
+				else if (j < num)
+				{
+					printf("*");
+				}
+				else
+					printf(" ");
+			}
+		}
+		else if (i == (num + 1) / 2)
+		{
+			for (j = 1; j <= num + num; j++)
+			{
+				if (j == num || j >= num + (num + 1) / 2)
+				{
+					printf("*");
+				}
+				else
+				{
+					printf(" ");
+				}
+			}
+		}
+		else
+		{
+			for (j = 1; j <= num + num; j++)
+			{
+				if (j == num || j == num + (num + 1) / 2)
+				{
+					printf("*");
+				}
+				else
+				{
+					printf(" ");
+				}
+			}
+		}
+		printf("\n");
+	}
+}

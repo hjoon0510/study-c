@@ -1,0 +1,55 @@
+#include<stdio.h>
+int main()
+{
+	int num = 0, i = 0, j = 0 , Q = 0, n = 0;
+	scanf("%d", &num);
+	if (num <= 25){
+	n = 4;
+	Q = Q + (num + 1) / 2 + 4;
+	}
+	else if (num > 25){
+	n = 8;
+	Q = Q + (num + 1) / 2 + 8;
+	}
+	for (i = 1; i <= num; i++)
+
+	{
+
+		if (i == 1 || i == num)
+		{
+			for (j = 1; j <= num; j++)
+			{
+				if (j == 1 || j == num)
+				{
+					printf(" ");
+				}
+
+				else
+					printf("*");
+			}
+
+		}
+		else{
+			for (j = 1; j <= num + num; j++){
+
+				if (j == 1 || j == num){
+
+					printf("*");
+
+				}
+				else if (j == Q && i >= (num + 1) / 2 + 1)
+				{
+					printf("*");
+				}
+				else
+					printf(" ");
+			}
+			if (i >= (num + 1) / 2 + 1){
+				Q++;
+			}
+		}
+
+		printf("\n");
+	}
+
+}
