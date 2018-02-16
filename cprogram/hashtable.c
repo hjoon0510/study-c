@@ -30,14 +30,7 @@ void insert(char name[10], int score, char address[30], char email[20]) // 데�
 	data[index].score = score;
 }
 
-void remove(char name[10], int number)
-{
-	strcpy(data[number].name,    " ");
-	strcpy(data[number].address, " ");
-	strcpy(data[number].email, " ");
-	data[number].score = 0;
 
-};
 int main(void)
 {
 	// 데이타 (성명, 점수)를 입력한다.
@@ -50,8 +43,6 @@ int main(void)
 	// 김은혜의 index 값 7으로 해당 정원시 영통보를 곧바로 출력한다. 
 	find("김은혜", 7);
 
-	// 김수연, 28을 입력한다면 그 정보를 삭제하는 함수를 작성한다. 
-	remove("김수연", 8); 
 	return 0;
 
 }
