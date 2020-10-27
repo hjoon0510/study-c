@@ -1,4 +1,4 @@
-//-make hello function
+/* make hello function */
 
 
 #include<stdio.h>
