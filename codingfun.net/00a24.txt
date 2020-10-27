@@ -8,7 +8,9 @@ void main()
 
     printf("%.3f",A/B);
 }
-/*#include <stdio.h>´ÂÇÔ¼ö¸¦ ½±°Ô ¾µ¼öÀÖ´Ù
-#ÀºÀüÃ³¸®±âÀÌ´Ù,ÄÄÆÄÀÏ·¯°¡ ÄÄÆÄÀÏÀ» ¼öÇàÇÏ±âÀü¿¡ Ã³¸®ÇÏ¶ó´Â°ÍÀÌ´Ù
-#include <stdio.h>´ÂÇì´õÆÄÀÏÀÌ´Ù
+/*
+#include <stdio.h>ëŠ”í•¨ìˆ˜ë¥¼ ì‰½ê²Œ ì“¸ìˆ˜ìžˆë‹¤
+#ì€ì „ì²˜ë¦¬ê¸°ì´ë‹¤,ì»´íŒŒì¼ëŸ¬ê°€ ì»´íŒŒì¼ì„ ìˆ˜í–‰í•˜ê¸°ì „ì— ì²˜ë¦¬í•˜ë¼ëŠ”ê²ƒì´ë‹¤
+#include <stdio.h>ëŠ”í—¤ë”íŒŒì¼ì´ë‹¤
 %.3f
+*/
